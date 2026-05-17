@@ -1,15 +1,18 @@
 # uCode4 — Spatial/3D Layer
 
 **Ownership:** uDosGo  
-**Core Language:** Python  
+**Core Language:** Python + Three.js  
 **CLI Command:** `ucode` (runtime/educational)  
-**Status:** 🟢 Active
+**Status:** 🟢 Active  
+**Size:** ~1.0M / 1K lines
 
 ---
 
 ## Overview
 
-uCode4 is the **Spatial/3D layer** of the uDos ecosystem — providing virtual worlds, spatial computing, and 3D environment management. It builds on the grid/cell system from uCode1 and the sprite/BOB rendering from uCode2 to create immersive 3D spaces.
+uCode4 is the **spatial/3D layer** of the uDos ecosystem — providing virtual worlds, spatial computing, and 3D environment management. It builds on the grid/cell system from uCode1 and the sprite/BOB rendering from uCode2 to create immersive 3D spaces.
+
+uCode4 may import from uCode2 (spatial primitives, coordinate system) and uCode1 (grid cell addressing) but never from uCode3.
 
 ### What uCode4 Owns
 
@@ -18,19 +21,30 @@ uCode4 is the **Spatial/3D layer** of the uDos ecosystem — providing virtual w
 - **Virtual World Management** — Create, edit, and navigate 3D spaces
 - **Scene Composition** — Layer sprites, BOBs, and teletext into 3D scenes
 - **World Persistence** — Save/load world states
+- **Portal System** — Inter-map gateways (L700-L799)
+- **Three.js Frontend** — WebGL 3D viewport
 
 ### What Belongs to Other Layers
 
-| Feature | Layer | CLI |
+| Feature | Layer | Why |
 |---------|-------|-----|
-| Grid/cell system, BASIC runtime | uCode1 | `ucode` |
-| Sprites & BOBs (visual rendering) | uCode2 | `ucode` |
-| Vector/SVG, HomeNest | uCode3 | `ucode` |
-| System operations (daemons, containers) | System | `udo` |
+| Grid/cell coordinate system | uCode1 | Foundation — uCode4 consumes it |
+| Sprites & BOBs (visual rendering) | uCode2 | Services layer — uCode4 consumes it |
+| MCP Gateway | uCode2 | Services layer |
+| Vault Bridge | uCode2 | Services layer |
+| Home media, automation | uCode3 | Application layer |
 
-### CLI: `ucode` (Runtime/Educational)
+### Dependency Rule
 
-All uCode layers use the `ucode` command. System operations use `udo` (see [Connect/udo](https://github.com/uDosGo/Connect)).
+```
+uCode1 ──► uCode2 ──► uCode3 ──► uCode4
+```
+
+uCode4 may import from uCode2 (spatial, sprites) and uCode1 (grid types). uCode4 has no dependencies on uCode3.
+
+---
+
+## CLI: `ucode` (Runtime/Educational)
 
 ```
 ucode <command> [arguments] [flags]
@@ -72,19 +86,19 @@ ucode portal create --from L400-AA10-0000-0 --to L500-BB20-0505-0
 
 ```
 uCode4 (Python)
-├── World Engine      — 3D world creation and management
-├── Scene Manager     — Scene composition (sprites, BOBs, teletext)
-├── Camera System     — Viewport and camera control
-├── Renderer          — 3D to 2D projection and output
-├── Portal System     — Inter-map gateways (L700-L799)
-├── Spatial Index     — Spatial query and neighbour resolution
-├── Persistence       — World state save/load
-└── CLI               — Command-line interface (ucode4)
+├── world/           — 3D world creation and management
+├── scene/           — Scene composition (sprites, BOBs, teletext)
+├── camera/          — Viewport and camera control
+├── renderer/        — 3D to 2D projection and output
+├── portal/          — Inter-map gateways (L700-L799)
+├── spatial/         — Spatial query and neighbour resolution
+├── persistence/     — World state save/load
+└── cli/             — Command-line interface
 
 uCode4 (JavaScript/Three.js)
-└── 3dWorld/          — WebGL frontend (Vite + Three.js)
-    ├── src/main.js   — WorldRenderer class
-    └── index.html    — 3D viewport
+└── 3dworld/         — WebGL frontend (Vite + Three.js)
+    ├── src/main.js  — WorldRenderer class
+    └── index.html   — 3D viewport
 ```
 
 ### Layer Bands for 3D Worlds
@@ -112,11 +126,6 @@ pip install -e ".[dev]"
 pytest tests/
 ```
 
-### Build
-```bash
-python -m build
-```
-
 ---
 
 ## License
@@ -125,4 +134,4 @@ MIT
 
 ---
 
-*Part of the uDos ecosystem. See [uCode1](https://github.com/uDosGo/uCode1) for the grid/cell system and [uCode2](https://github.com/uDosGo/uCode2) for sprites/BOBs.*
+*Part of the uDos ecosystem. See [uCode1](https://github.com/uDosGo/uCode1) for the grid/cell foundation and [uCode2](https://github.com/uDosGo/uCode2) for the services layer.*
