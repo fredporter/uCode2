@@ -1,3 +1,11 @@
+---
+title: "uCode4 Themes"
+status: draft
+last_updated: 2026-05-17T00:14:16+10:00
+category: readme
+tags: [ucode4]
+description: "**Status:** Active — Theme layer for uCode4 console scaffold"
+---
 # uCode4 Themes
 
 **Status:** Active — Theme layer for uCode4 console scaffold

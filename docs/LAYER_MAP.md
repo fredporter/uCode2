@@ -1,3 +1,11 @@
+---
+title: "L100–899 Grid Layer Map — Full Specification"
+status: draft
+last_updated: 2026-04-30T02:43:33+10:00
+category: specification
+tags: [ucode4]
+description: "The uDos grid spans 8 level bands (L100–L899), each containing 100 levels of spatial data. This is the unified coordi..."
+---
 # L100–899 Grid Layer Map — Full Specification
 
 ## Overview

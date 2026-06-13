@@ -1,3 +1,11 @@
+---
+title: "uCode4 — Interdimensional Spatial & 3D Runtime"
+status: draft
+last_updated: 2026-04-30T02:43:33+10:00
+category: readme
+tags: [ucode4]
+description: "**Status:** Planning / Pre-Alpha"
+---
 # uCode4 — Interdimensional Spatial & 3D Runtime
 
 **Status:** Planning / Pre-Alpha

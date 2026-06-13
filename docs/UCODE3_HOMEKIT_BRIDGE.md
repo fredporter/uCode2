@@ -1,3 +1,11 @@
+---
+title: "uCode3 × HomeKit — Console/Media Server Convergence"
+status: draft
+last_updated: 2026-04-30T02:43:33+10:00
+category: documentation
+tags: [homekit, homenest, iot, ucode3, ucode4]
+description: "**uHomeNest** (`~/Code/HomeKit/`) is the reference implementation for uCode3's console/tablet/touch + layback computi..."
+---
 # uCode3 × HomeKit — Console/Media Server Convergence
 
 **uHomeNest** (`~/Code/HomeKit/`) is the reference implementation for uCode3's console/tablet/touch + layback computing runtime.

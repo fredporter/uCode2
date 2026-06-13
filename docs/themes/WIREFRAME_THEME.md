@@ -1,3 +1,11 @@
+---
+title: "Wireframe Theme — uCode4 Console Scaffold"
+status: draft
+last_updated: 2026-05-17T00:14:16+10:00
+category: documentation
+tags: [ucode4]
+description: "**Status:** Active — Console scaffold theme for uCode4"
+---
 # Wireframe Theme — uCode4 Console Scaffold
 
 **Status:** Active — Console scaffold theme for uCode4

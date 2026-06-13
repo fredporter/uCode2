@@ -1,3 +1,11 @@
+---
+title: "uCode3 — Console, Tablet & Layback Computing Runtime"
+status: draft
+last_updated: 2026-04-30T02:43:33+10:00
+category: documentation
+tags: [homenest, ucode3, ucode4]
+description: "**Status:** Planning — Reference implementation: `~/Code/HomeKit/` (uHomeNest)"
+---
 # uCode3 — Console, Tablet & Layback Computing Runtime
 
 **Status:** Planning — Reference implementation: `~/Code/HomeKit/` (uHomeNest)

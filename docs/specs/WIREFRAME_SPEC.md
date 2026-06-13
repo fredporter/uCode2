@@ -1,3 +1,11 @@
+---
+title: "Wireframe Console Scaffold Specification v1.0.0"
+status: draft
+last_updated: 2026-05-17T00:14:16+10:00
+category: specification
+tags: [specification, ucode4]
+description: "**Updated:** 2026-05-16"
+---
 # Wireframe Console Scaffold Specification v1.0.0
 
 **Status:** Active
