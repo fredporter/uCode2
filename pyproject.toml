@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ucode4"
-version = "0.1.0"
+version = "0.1.0-dev"
 description = "uCode4 — Spatial/3D layer: Virtual worlds and spatial computing for uDos"
 readme = "README.md"
 license = { text = "MIT" }
